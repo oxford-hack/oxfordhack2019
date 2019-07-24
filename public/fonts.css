@@ -1,5 +1,5 @@
 h1 {
-    font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 23px;
     font-style: normal;
     font-variant: normal;
@@ -7,7 +7,7 @@ h1 {
     line-height: 23px;
 }
 h3 {
-    font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 17px;
     font-style: normal;
     font-variant: normal;
@@ -15,15 +15,15 @@ h3 {
     line-height: 23px;
 }
 p, label {
-    font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 15px;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
     line-height: 23px;
 }
 blockquote {
-    font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 17px;
     font-style: normal;
     font-variant: normal;
@@ -31,7 +31,7 @@ blockquote {
     line-height: 23px;
 }
 pre {
-    font-family: 'Source Sans Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-variant: normal;
