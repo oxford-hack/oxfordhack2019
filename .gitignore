@@ -1,3 +1,4 @@
-*.py
-*-old.svg
-*.old
+_site
+.sass-cache
+.jekyll-metadata
+public/
