@@ -1,0 +1,28 @@
+#site-logo {
+    height: $navbar-height - 10;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/*@include media-query($on-palm) {
+    body {
+    }
+}*/
+
+@include not-media-query($on-palm) {
+    .site-nav {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        margin-right: 15px;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+}
+
+.site-nav .trigger .active {
+    font-weight: bold;
+}
