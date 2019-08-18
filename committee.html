@@ -1,0 +1,60 @@
+---
+layout: page
+title: Committee
+heading: Who are we?
+permalink: /committee/
+split-left: 7-24
+split-middle: 1-24
+split-right: 2-3
+committee:
+    - picture: bgskyline.png
+      name: NAME
+      role: ROLE
+      description: Description
+      email: Email
+    - picture: bgskyline.png
+      name: NAME
+      role: ROLE
+      description: Description
+      email: Email
+    - picture: bgskyline.png
+      name: NAME
+      role: ROLE
+      description: Description
+      email: Email
+    - picture: bgskyline.png
+      name: NAME
+      role: ROLE
+      description: Description
+      email: Email
+---
+
+<div class="pure-g">
+    {% for item in page.committee %}
+    <div class="pure-u-{{ page.split-left }} committee-image-box">
+        <img class="committee-image" src="{{ site.baseurl }}/media/{{ item.picture }}"></img>
+    </div>
+    <div class="pure-u-{{ page.split-middle }}"></div>
+    <div class="pure-u-{{ page.split-right }}">
+        <h2 class="committee-name">{{ item.name }}</h2>
+        <h3 class="committee-role">{{ item.role }}</h3>
+        <p class="committee-description">
+            {% assign words = item.description | split: " " %}
+            {% for word in words %}
+                {% assign is_email = word | regex_replace: "([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+", "**EMAIL**" %}
+                {% if is_email contains "**EMAIL**" %}
+                    {% assign endchar = word | slice: -1 %}
+                    {% if endchar == "." %}
+                        {{ word | split: "" | reverse | slice: 1, 1000 | reverse | join: "" | create_mailto_link }}{{ word | slice: -1 }}
+                    {% else %}
+                        {{ word | create_mailto_link }}
+                    {% endif %}
+                {% else %}
+                    {{ word }}
+                {% endif %}
+            {% endfor %}
+        </p>
+        <p class="committee-email">{{ item.email | create_mailto_link }}</p>
+    </div>
+    {% endfor %}
+</div>

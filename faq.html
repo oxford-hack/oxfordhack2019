@@ -1,17 +1,65 @@
 ---
-layout: default
+layout: page
 title: FAQ
+heading: Frequently Asked Questions
 permalink: /faq/
+faq:
+    - title: Category 1
+      questions:
+          - question: Test question?
+            answer: Test answer!
+          - question: What is Oxford Hack?
+            answer: Oxford Hack is the official Oxford student hackathon, where over 300 people gather every year to collaborate, innovate, learn and experiment while creating a project from scratch in 24 hours. We’ll give you all the resources you need, from hardware and APIs to workshops, sponsors and volunteers who can help you with whatever questions you might have. In a few words, you come here to have fun, learn about things you didn’t even know existed and see your ideas come to life.
+          - question: What makes Oxford Hack special?
+            answer: "Oxford Hack is an inclusive and encouraging event, providing a unique opportunity to hone your skills in any technical field you like. We don’t impose any restrictions on the product your team makes (as long as it’s related to computers!), so you can be as experimental or disciplined as you like. We’ve got a wonderful set of sponsors, who’ll be arranging their own prize categories and workshops.<br />
+            Also, this is Oxford. The city’s alight with a creative, innovative and competitive buzz, which makes our hack electrifying. If that’s not good enough for you: We’ll be hacking in the Mathematical Institute, which has excellent facilities, open collaborative space, and marvelous architecture."
+          - question: Can I participate in Oxford Hack?
+            answer: Students at all levels of study and over the age of 18 are welcome to attend Oxford Hack.
+          - question: Do I need to have a team?
+            answer: No - we’ll have some time in the beginning to meet everyone and make teams. 
+          - question: Do I need to pay to participate?
+            answer: No - Oxford Hack is completely free to attend.
+          - question: What do I need to bring?
+            answer: You will have to bring a laptop and charger, as well as a sleeping bag if you wish to use our sleeping area during the event. We will provide food and drinks, as well as all the technical support you need.
+          - question: How do I get to Oxford Hack?
+            answer: You will need to make your own way to Oxford Hack. We will give more information about travel reimbursements closer to the event.
+          - question: How many people can be in a team?
+            answer: You can have up to 4 people in a team.
+          - question: Can I start working on my project before the event?
+            answer: No - because we want our event to be fair, everyone has the same starting line, so all projects have to be created from scratch during the 24 hours of the hackathon.
+          - question: "Error 404: question not found"
+            answer: Have more questions? Contact us at committee@oxfordhack.co.uk.
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="page-contents">
-      bbbbbb
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="pure-g">
+    <div class="pure-u-1 faq-nav">
+        {% for category in page.faq %}
+        <h4>{{ category.title }}</h4>
+        <ul>
+            {% for item in category.questions %}
+            <li><a href="#{{ item.question | slugify }}">{{ item.question }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+    <div class="pure-u-1 faq-full">
+        {% for category in page.faq %}
+        {% for item in category.questions %}
+            <h2 id="{{ item.question | slugify}}">{{ item.question }}<a class="header-link" href="#{{ item.question | slugify }}">#</a></h2>
+            {% assign words = item.answer | split: " " %}
+            {% for word in words %}
+                {% assign is_email = word | regex_replace: "([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+", "**EMAIL**" %}
+                {% if is_email contains "**EMAIL**" %}
+                    {% assign endchar = word | slice: -1 %}
+                    {% if endchar == "." %}
+                        {{ word | split: "" | reverse | slice: 1, 1000 | reverse | join: "" | create_mailto_link }}{{ word | slice: -1 }}
+                    {% else %}
+                        {{ word | create_mailto_link }}
+                    {% endif %}
+                {% else %}
+                    {{ word }}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+        {% endfor %}
 </div>
