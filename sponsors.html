@@ -2,10 +2,56 @@
 layout: page
 title: Sponsors
 permalink: /sponsors/
+split-left: 7-24
+split-middle: 1-24
+split-right: 2-3
+sponsors-platinum:
+    - name: Cisco
+      logo: something.png
+      description: hello there
+    - name: Microsoft
+      logo: something2.png
+      description: also hello there
 ---
 
 <div class="pure-g">
     <div class="pure-u-1">
         Oxford Hack is grateful to be supported by a range of wonderful sponsors. Check out who they are and what they’re doing at the hackathon below!
+    </div>
+    
+    <div class="pure-u-1">
+        <div class="sponsors-header sponsors-platinum">
+            PLATINUM
+        </div>
+    </div>
+
+    <!-- maybe have platinum sponsors have their logo above the description, gold and below have a smaller logo to the side -->
+    {% for sponsor in page.sponsors-platinum %}
+    <div class="pure-u-{{ page.split-left }}">
+        {{ sponsor.logo }}
+    </div>
+    <div class="pure-u-{{ page.split-middle }}"></div>
+    <div class="pure-u-{{ page.split-right }}">
+        {{ sponsor.name }}
+        {{ sponsor.description }}
+    </div>
+    {% endfor %}
+
+    <div class="pure-u-1">
+        <div class="sponsors-header sponsors-gold">
+            GOLD
+        </div>
+    </div>
+
+    <div class="pure-u-1">
+        <div class="sponsors-header sponsors-silver">
+            SILVER
+        </div>
+    </div>
+
+    <div class="pure-u-1">
+        <div class="sponsors-header sponsors-bronze">
+            BRONZE
+        </div>
     </div>
 </div>

@@ -7,32 +7,49 @@ split-left: 7-24
 split-middle: 1-24
 split-right: 2-3
 committee:
-    - picture: bgskyline.png
-      name: NAME
-      role: ROLE
+    - picture: alexandra.jpg
+      name: Alexandra Manciu
+      role: Hackathon Director
+      description: "My name is Alex and I’m co-directing Oxford Hack this year. I love getting involved in this kind of events and I am more than excited to work with the rest of the committee to make this year’s event the best that Oxford has seen.<br />I’m a fairly adventurous and creative person, which is why this role is perfect for me - if you think the same about yourself, you can contact me to talk about how to get involved next year! You can find me on Facebook <a href=\"https://www.facebook.com/AlexandraManciu15\">here</a>."
+      email: Email
+    - picture: serban.png
+      name: Șerban Șlincu
+      role: Hackathon Director
+      description: "Hello! I’m Serban, pronounced ‘share-bun’, and I’m one of the two hackathon directors.<br />Working with the rest of the team to organise this hackathon is the second most exciting part of my uni life, the first being my boat and all those times I’ve been attacked by geese on the Cherwell river.<br />Luckily, I’ve survived all of them! So if you want to find out more about this or talk about literally anything else (focus on Oxford Hack and how to become a hackathon director yourself), then hit me up on Facebook <a href=\"https://www.facebook.com/SerbanStefanSlincu\">here</a>!"
+      email: Email
+    - picture: sam.jpg
+      name: Sam Boyer
+      role: Marketing Director
+      description: "Hey! I’m Sam, a second-year CompSci and the Marketing Director for Oxford Hack 2019 ✨<br />My responsibility in this little dream team is all things communication and advertising, so if you’re reading this then I must’ve already done a pretty good job. When I’m not writing masterpieces for the Facebook page, I enjoy gaming, running, lo-fi hip hop, and rocky road. ❤<br />If you’d like to talk about my role, the hack, or anything mildly interesting, feel free to drop me an email: samuel.boyer@stcatz.ox.ac.uk 👍"
+      email: Email
+    - picture: deniz.jpg
+      name: Deniz De Barros
+      role: Design Director
+      description: "Hello! I’m Deniz, this year’s Design Director for the hackathon! My job is to create all of the artsy parts (if you’re seeing this, I’m guessing the view is pretty good.) Apart from working for OxHack, I do editorial or illustrative work for other Oxford University magazines and journals. You can also find me playing water polo, storyboarding, or playing dungeons and dragons...<br /> If you’d like to get in contact, feel free to drop me an email: deniz.debarros@sjc.ox.ac.uk."
+      email: Email
+    - picture: josh.png
+      name: Josh Smailes
+      role: Technical Director
       description: Description
       email: Email
-    - picture: bgskyline.png
-      name: NAME
-      role: ROLE
-      description: Description
+    - picture: edd.jpg
+      name: Edd Salkield
+      role: Sponsorship Director
+      description: "Hi! I’m Edd - I’m in my 4th year studying CS, and a sponsorship co-director of Oxford Hack! With an intrepid team of friends, I’ve travelled the world in the quest to make the most memeworthy hardware hack.  I get inspired by projects that show real innovation (the true hacker spirit), and I’m looking to inspire the hackers of 2019 to start writing (and breaking) free software.<br />I have far too many side projects, including tea appreciation, writing electronic music, and I’m really involved in the Oxford Inter-Collegiate Christian Union.  Feel free to reach out to me at edward.salkield@stcatz.ox.ac.uk; I’d love to hear from you!"
       email: Email
-    - picture: bgskyline.png
-      name: NAME
-      role: ROLE
-      description: Description
-      email: Email
-    - picture: bgskyline.png
-      name: NAME
-      role: ROLE
-      description: Description
+    - picture: daryl.jpg
+      name: Daryl Chulho Hyun
+      role: Sponsorship Director
+      description: "I am Daryl, one of the sponsorship directors of Oxford Hack 2019. I got fascinated by hackathon and how it plays a crucial role for open innovation when I participated Hacking Dermatology in Boston. Besides working on Oxford Hack, I develop and commercialise a wearable device as part of Biodesign fellowship programme. Feel free to contact me about how to get involved in Oxford Hack through <a href=\"https://www.linkedin.com/in/darylhyun/\">LinkedIn</a>."
       email: Email
 ---
 
 <div class="pure-g">
     {% for item in page.committee %}
-    <div class="pure-u-{{ page.split-left }} committee-image-box">
-        <img class="committee-image" src="{{ site.baseurl }}/media/{{ item.picture }}"></img>
+    <div class="pure-u-{{ page.split-left }}">
+        <div class="committee-image-box">
+            <img class="committee-image" src="{{ site.baseurl }}/media/committee/{{ item.picture }}"></img>
+        </div>
     </div>
     <div class="pure-u-{{ page.split-middle }}"></div>
     <div class="pure-u-{{ page.split-right }}">
@@ -44,7 +61,7 @@ committee:
                 {% assign is_email = word | regex_replace: "([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+", "**EMAIL**" %}
                 {% if is_email contains "**EMAIL**" %}
                     {% assign endchar = word | slice: -1 %}
-                    {% if endchar == "." %}
+                    {% if endchar == "." or endchar == ";" %}
                         {{ word | split: "" | reverse | slice: 1, 1000 | reverse | join: "" | create_mailto_link }}{{ word | slice: -1 }}
                     {% else %}
                         {{ word | create_mailto_link }}
@@ -54,7 +71,7 @@ committee:
                 {% endif %}
             {% endfor %}
         </p>
-        <p class="committee-email">{{ item.email | create_mailto_link }}</p>
+        <!--<p class="committee-email">{{ item.email | create_mailto_link }}</p>-->
     </div>
     {% endfor %}
 </div>

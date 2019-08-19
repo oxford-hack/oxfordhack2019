@@ -69,5 +69,35 @@ body {
     right: 0;
     border-radius: 50%;
     height: 100%;
-    object-fit: none;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sponsors-header {
+    //left: 0;
+    //width: 100vw;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    //color: grey;
+
+    &.sponsors-platinum {
+        background-color: #b0c4de;
+    }
+
+    &.sponsors-gold {
+        background-color: #ffd700;
+    }
+
+    &.sponsors-silver {
+        background-color: #c0c0c0;
+    }
+
+    &.sponsors-bronze {
+        background-color: #cd7f32;
+    }
 }
