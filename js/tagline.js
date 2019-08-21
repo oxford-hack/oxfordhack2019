@@ -34,7 +34,6 @@ function setText(percentage){
 function startAnim(dir){
 	for(var i=0; i<frames; i++){
 		var p = i/frames;
-		console.log(p);
 		setTimeout(setText.bind(this, dir ? p : 1-p), p * animDur);
 	}
 	setTimeout(function(){setText(dir ? 1 : 0)}, animDur);

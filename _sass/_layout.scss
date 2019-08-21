@@ -103,16 +103,26 @@
  * Site footer
  */
 .footer-container {
-    position: absolute;
+    position: relative;
     width: 100%;
     right: 0;
-    //bottom: 0;
+    bottom: 0;
     left: 0;
 }
 
+/*.long-screen-fix {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    height: 30px;
+    background-color: #ff0000;
+}*/
+
 .site-footer {
     //border-top: 1px solid $grey-color-light;
-    padding: 0 0 $spacing-unit 0;
+    padding: $spacing-unit 0 $spacing-unit 0;
     background-color: $background-color;
 }
 

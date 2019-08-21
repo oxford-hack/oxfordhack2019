@@ -101,3 +101,27 @@ body {
         background-color: #cd7f32;
     }
 }
+
+@include not-media-query($on-laptop) {
+    #tagline {
+        font-size: 54px;
+    }
+
+    .padding-div {
+        height: 100px;
+    }
+}
+
+@include media-query($on-laptop) {
+    #tagline {
+        font-size: 6vw;
+    }
+
+    .padding-div {
+        height: 50px;
+    }
+}
+
+.description {
+    font-size: 20px;
+}
