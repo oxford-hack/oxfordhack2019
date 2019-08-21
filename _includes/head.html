@@ -11,4 +11,12 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  {% if page.js %}
+  {% for script in page.js %}
+  <script src="{{ site.baseurl }}/js/{{ script }}"></script>
+  {% endfor %}
+  {% endif %}
 </head>
