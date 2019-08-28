@@ -3,11 +3,10 @@ layout: page
 title: FAQ
 heading: Frequently Asked Questions
 permalink: /faq/
+order: 2
 faq:
-    - title: Category 1
+    - title: Questions
       questions:
-          - question: Test question?
-            answer: Test answer!
           - question: What is Oxford Hack?
             answer: Oxford Hack is the official Oxford student hackathon, where over 300 people gather every year to collaborate, innovate, learn and experiment while creating a project from scratch in 24 hours. We’ll give you all the resources you need, from hardware and APIs to workshops, sponsors and volunteers who can help you with whatever questions you might have. In a few words, you come here to have fun, learn about things you didn’t even know existed and see your ideas come to life.
           - question: What makes Oxford Hack special?
@@ -34,18 +33,20 @@ faq:
 <div class="pure-g">
     <div class="pure-u-1 faq-nav">
         {% for category in page.faq %}
-        <h4>{{ category.title }}</h4>
-        <ul>
+        <fieldset class="faq-questions" style="border: 1px white solid">
+            <legend class="faq-questions-title" style="margin-left: 1em; padding: 0.2em 0.8em ">{{ category.title }}</legend>
             {% for item in category.questions %}
-            <li><a href="#{{ item.question | slugify }}">{{ item.question }}</a></li>
+            <a href="#{{ item.question | slugify }}">{{ item.question }}</a><br />
             {% endfor %}
-        </ul>
+        </fieldset>
         {% endfor %}
     </div>
     <div class="pure-u-1 faq-full">
         {% for category in page.faq %}
         {% for item in category.questions %}
-            <h2 id="{{ item.question | slugify}}">{{ item.question }}<a class="header-link" href="#{{ item.question | slugify }}">#</a></h2>
+            <span class="anchor" id="{{ item.question | slugify }}"></span>
+            <h2>{{ item.question }}<a class="header-link" href="#{{ item.question | slugify }}">#</a></h2>
+            <p class="faq-answer">
             {% assign words = item.answer | split: " " %}
             {% for word in words %}
                 {% assign is_email = word | regex_replace: "([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+", "**EMAIL**" %}
@@ -60,6 +61,7 @@ faq:
                     {{ word }}
                 {% endif %}
             {% endfor %}
+            </p>
         {% endfor %}
         {% endfor %}
 </div>

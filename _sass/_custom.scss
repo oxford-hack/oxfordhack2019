@@ -42,10 +42,6 @@
     z-index: 10;
 }
 
-body {
-    background-image: url($baseurl + "/media/bgtiling.png");
-}
-
 .committee-image-box {
     position: relative;
     overflow: hidden;
@@ -107,9 +103,16 @@ body {
         font-size: 54px;
     }
 
-    .padding-div {
-        height: 100px;
+    .tagline-container {
+        $margin-total: 69vh;
+        $margin-top: 28vh;
+        margin-top: $margin-top;
+        margin-bottom: $margin-total - $margin-top;
     }
+
+//    .padding-div {
+//        height: 34vh;
+//    }
 }
 
 @include media-query($on-laptop) {
@@ -117,11 +120,67 @@ body {
         font-size: 6vw;
     }
 
-    .padding-div {
-        height: 50px;
+    .tagline-container {
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
+
+//    .padding-div {
+//        height: 50px;
+//    }
 }
 
 .description {
     font-size: 20px;
+}
+
+.description, .register-button {
+    text-align: center;
+}
+
+.pure-button-primary {
+    background-color: $brand-color !important;
+}
+
+.faq-answer {
+    margin-bottom: 50px;
+}
+
+.emphasis {
+    color: $brand-color !important;
+    font-size: 24px;
+}
+
+.committee-description {
+    margin-bottom: 50px;
+}
+
+#mlh-trust-badge {
+    @include media-query($on-palm) {
+        top: $navbar-height;
+        z-index: 9;
+    }
+
+    display: block;
+    max-width: 100px;
+    min-width: 60px;
+    position: fixed;
+    right: 30px;
+    top: 0;
+    width: 10%;
+    z-index: 11;
+
+    img {
+        width: 100%;
+    }
+}
+
+.faq-questions {
+    border: 1px white solid;
+    margin-bottom: 50px;
+}
+
+.faq-questions-title {
+    margin-left: 1em;
+    padding: 0.2em 0.8em;
 }

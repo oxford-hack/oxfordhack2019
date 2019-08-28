@@ -3,6 +3,7 @@ layout: page
 title: Committee
 heading: Who are we?
 permalink: /committee/
+order: 1
 split-left: 7-24
 split-middle: 1-24
 split-right: 2-3
@@ -56,20 +57,7 @@ committee:
         <h2 class="committee-name">{{ item.name }}</h2>
         <h3 class="committee-role">{{ item.role }}</h3>
         <p class="committee-description">
-            {% assign words = item.description | split: " " %}
-            {% for word in words %}
-                {% assign is_email = word | regex_replace: "([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+", "**EMAIL**" %}
-                {% if is_email contains "**EMAIL**" %}
-                    {% assign endchar = word | slice: -1 %}
-                    {% if endchar == "." or endchar == ";" %}
-                        {{ word | split: "" | reverse | slice: 1, 1000 | reverse | join: "" | create_mailto_link }}{{ word | slice: -1 }}
-                    {% else %}
-                        {{ word | create_mailto_link }}
-                    {% endif %}
-                {% else %}
-                    {{ word }}
-                {% endif %}
-            {% endfor %}
+            {% assign words = item.description | split: " " %}{% for word in words %}{% assign is_email = word | regex_replace: "([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+", "**EMAIL**" %}{% if is_email contains "**EMAIL**" %}{% assign endchar = word | slice: -1 %}{% if endchar == "." or endchar == ";" %}{{ word | split: "" | reverse | slice: 1, 1000 | reverse | join: "" | create_mailto_link }}{{ word | slice: -1 }} {% else %}{{ word | create_mailto_link }} {% endif %}{% else %}{{ word }} {% endif %}{% endfor %}
         </p>
         <!--<p class="committee-email">{{ item.email | create_mailto_link }}</p>-->
     </div>

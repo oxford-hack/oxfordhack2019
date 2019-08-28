@@ -2,7 +2,10 @@
 layout: page
 title: About
 permalink: /about/
+order: 0
 ---
+
+[MLH Code of Conduct](http://mlh.io/code-of-conduct)
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
 

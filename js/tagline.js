@@ -3,6 +3,10 @@ var delay1 = 3000;
 var animDur = 850;
 var secondOffset = 25;
 var frames = 18;
+var text1 = 'resources'
+var texts1 = ['pole', 'duck']
+var text2 = 'hacking'
+var texts2 = ['punting', 'quacking']
 
 function mutate(start, end, p){
 	if(p==0) return start;
