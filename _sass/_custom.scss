@@ -184,3 +184,25 @@
     margin-left: 1em;
     padding: 0.2em 0.8em;
 }
+
+#register-questions {
+    list-style: none;
+}
+
+input:not([type=file]):not(.button), textarea {
+    background-color: white;
+    color: black;
+}
+
+.hide {
+    display: none;
+}
+
+.form-entry {
+    margin-bottom: 20px;
+}
+
+.padding-fix {
+    height: 0;
+    margin-bottom: 100vh;
+}

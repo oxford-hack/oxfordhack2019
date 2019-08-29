@@ -7,12 +7,7 @@ order: 0
 
 [MLH Code of Conduct](http://mlh.io/code-of-conduct)
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+Oxford University’s official hackathon, returning for 2019.  
+It’s an exciting, inclusive coding event, encouraging student teams of all backgrounds to build something brilliant - in 24 hours.  
+With so much talent under one roof, the only limit is your imagination. Step - or dive - out of your comfort zone, try a new language or platform, design a game or train a model: the choice is up to you.  
+Sounds interesting? Apply for a place below!
