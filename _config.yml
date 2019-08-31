@@ -28,3 +28,5 @@ sitemap:
         - "/feed.xml"
         - "/feed/index.xml"
         - "/register-confirm/"
+        - "/css/main.scss"
+        - "/register-confirm.html"
