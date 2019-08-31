@@ -178,3 +178,12 @@ function addEvent( obj, type, fn ) {
     obj.addEventListener( type, fn, false );	
   }
 }
+
+function checkOther(value, toCheck, selector) {
+    if (value === toCheck) {
+        document.getElementById(selector).classList.remove("hide");
+    }
+    else {
+        document.getElementById(selector).classList.add("hide");
+    }
+}

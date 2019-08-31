@@ -8,13 +8,11 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
 body {
-    background-image: url($baseurl + "/media/bgtiling.png");
+    background-image: url($baseurl + "/media/bgtiling-small.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
