@@ -15,25 +15,24 @@
       <div class="footer-col-wrapper">
         <div class="footer-col footer-col-1">
           <ul class="contact-list">
-            <li>{{ site.title }}</li>
+            <li>© {{ site.title }}</li>
             <li>{{ site.email | create_mailto_link }}</li>
+            <li>Facebook: <a href="https://facebook.com/OxfordHack2019">OxfordHack2019</a></li>
           </ul>
         </div>
 
         <div class="footer-col footer-col-2">
-          <ul class="social-media-list">
-            {% if site.github_username %}
+          <!--<ul class="social-media-list">
+            {% if site.data.social-media %}
+            {% assign sm = site.data.social-media %}
+            {% for entry in sm %}
+            {% assign key = entry | first %}
             <li>
-              {% include icon-github.html username=site.github_username %}
+                <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><i class="fa {{ sm[key].fa-icon }}"></i>{{ sm[key].id }}</a>
             </li>
+            {% endfor %}
             {% endif %}
-  
-            {% if site.twitter_username %}
-            <li>
-              {% include icon-twitter.html username=site.twitter_username %}
-            </li>
-            {% endif %}
-          </ul>
+          </ul>-->
         </div>
 
         <div class="footer-col footer-col-3">
