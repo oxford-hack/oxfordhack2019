@@ -186,6 +186,17 @@
     }
 }
 
+#fb-icon {
+    @include media-query($on-palm) {
+        display: none;
+    }
+
+    position: fixed;
+    top: 54px;
+    right: 145px;
+    width: 24px;
+}
+
 .faq-questions {
     border: 1px white solid;
     margin-bottom: 50px;

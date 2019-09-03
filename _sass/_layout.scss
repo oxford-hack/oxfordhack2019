@@ -47,7 +47,7 @@
         }
         &:last-child {
             @include media-query($mlh-too-narrow) {
-                    margin-right: 140px;
+                    margin-right: $mlh-badge-width + 5px;
             }
             @include media-query($on-palm) {
                 margin-right: 0px !important;
@@ -201,6 +201,9 @@
  * Page content
  */
 .page-content {
+    @include media-query($on-palm) {
+        padding: $navbar-height+$spacing-unit+105 0 $spacing-unit 0;
+    }
     padding: $navbar-height+$spacing-unit 0 $spacing-unit 0;
 }
 

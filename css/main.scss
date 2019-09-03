@@ -33,7 +33,8 @@ $baseurl: "{{ site.baseurl }}";
 
 $on-palm:          860px;
 $on-laptop:        1000px;
-$mlh-too-narrow:   $content-width + 270px;
+$mlh-badge-width:  160px;
+$mlh-too-narrow:   $content-width + ($mlh-badge-width * 2);
 
 
 
