@@ -38,7 +38,9 @@ body {
     font-kerning: normal;
 }
 
-
+div * {
+    font-family: $base-font-family !important;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
