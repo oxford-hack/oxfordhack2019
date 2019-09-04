@@ -135,7 +135,7 @@
     margin-bottom: 100px;
 }
 
-.description.date-venue {
+.description.date-venue, .description.stats {
     color: #bababa;
 }
 
@@ -237,4 +237,20 @@ input:not([type=file]):not(.button), textarea {
 #form3 h3 small {
     font-size: 14px;
 }
+
+#duck-register {
+    @include media-query($on-palm) {
+        position: inherit;
+    }
+
+    position: absolute;
+    max-width: 15%;
+    min-width: 150px;
+    top: 0;
+    right: 35%;
+}
+
+.stat-icon img {
+    height: 32px;
+    fill: #bababa;
 }
