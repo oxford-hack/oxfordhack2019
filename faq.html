@@ -47,7 +47,7 @@ faq:
         {% for category in page.faq %}
         {% for item in category.questions %}
             <span class="anchor" id="{{ item.question | slugify }}"></span>
-            <h2>{{ item.question }}<a class="header-link" href="#{{ item.question | slugify }}">#</a></h2>
+            <h2>{{ item.question }}&nbsp;&nbsp;<a class="header-link" href="#">↑</a></h2>
             <p class="faq-answer">
             {% assign words = item.answer | split: " " %}
             {% for word in words %}
