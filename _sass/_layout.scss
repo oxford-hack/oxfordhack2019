@@ -46,13 +46,10 @@
             margin-right: 20px;
         }
         &:last-child {
-            @include media-query($mlh-too-narrow) {
-                    margin-right: $mlh-badge-width + 5px;
-            }
+            margin-right: $mlh-badge-width + 5px;
             @include media-query($on-palm) {
                 margin-right: 0px !important;
             }
-            margin-right: 0px;
         }
     }
 

@@ -9,22 +9,20 @@ split-left: ""
 split-right: "pure-u-xl-1-2 pure-u-lg-1-2 pure-u-md-1-4"
 split-middle: "pure-u-1 pure-u-xl-1-2 pure-u-lg-1-2 pure-u-md-3-4"
 split-middle-3: "pure-u-1-3 pure-u-xl-1-6 pure-u-lg-1-6 pure-u-md-1-4"
+split-fullwidth: "pure-u-1"
 js:
     - wufoo.js
 ---
-
-<!--<h2>Build something brilliant at Oxford Hack 2019.</h2>-->
 
 <div id="container" class="ltr pure-g">
 
     <form id="form3" name="form3" class="wufoo topLabel page pure-form pure-form-stacked" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://oxfordhack.wufoo.com/forms/qhjbior0gmwvzm/#public">
         <div class="{{ page.split-left }}"></div>
-        <div class="{{ page.split-middle }}">
+        <div class="{{ page.split-fullwidth }}">
             <h3 id="title10">
                 Basic Information
             </h3>
         </div>
-        <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
         <div class="{{ page.split-middle }} form-entry">
             <label class="desc" id="title1" for="Field1">
@@ -138,12 +136,11 @@ js:
         </div>
         <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
-        <div class="{{ page.split-middle }}">
+        <div class="{{ page.split-fullwidth }}">
             <h3 id="title9">
-                Diversity Information <small>(don't worry, we won't use this in the selection process!)</small>
+                Diversity Information<br /><small>Don't worry, we won't use this in the selection process!</small>
             </h3>
         </div>
-        <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
         <div class="{{ page.split-middle }} form-entry">
             <label class="desc notranslate" id="title13" for="Field13">
@@ -255,12 +252,11 @@ js:
         </div>
         <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
-        <div class="{{ page.split-middle }}">
+        <div class="{{ page.split-fullwidth }}">
             <h3 id="title29">
                 A bit about yourself
             </h3>
         </div>
-        <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
         <div class="{{ page.split-middle }} form-entry">
             <label class="desc" id="title30" for="Field30">
@@ -328,12 +324,11 @@ js:
         </div>
         <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
-        <div class="{{ page.split-middle }}">
+        <div class="{{ page.split-fullwidth }}">
             <h3 id="title33">
                 Other details
             </h3>
         </div>
-        <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
         <div class="{{ page.split-middle }} form-entry">
             <label class="desc notranslate" id="title34" for="Field34">
@@ -376,7 +371,7 @@ js:
         <div class="{{ page.split-left }}"></div>
         <div class="{{ page.split-middle }}">
             <label class="desc" id="title35" for="Field35">
-                Teammates (everyone in your team needs to fill this out!)
+                Teammates<br /><small>Everyone in your team needs to fill this out!</small>
             </label>
         </div>
         <div class="{{ page.split-right }}"></div>
@@ -403,23 +398,21 @@ js:
         </div>
         <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
-        <div class="{{ page.split-middle }} form-entry">
+        <div class="{{ page.split-fullwidth }} form-entry">
             <label class="choice" for="Field39">
                 <input id="Field39" name="Field39" type="checkbox" class="field checkbox" value="Agree" tabindex="0"     />
                 <span class="choice__text notranslate" >I have read and agree to the <a target="_blank" rel="noopener noreferrer" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct</a>.</span>
                 <span id="req_39" class="req">*</span>
             </label>
         </div>
-        <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
-        <div class="{{ page.split-middle }} form-entry">
+        <div class="{{ page.split-fullwidth }} form-entry">
             <label class="choice" for="Field139">
                 <input id="Field139" name="Field139" type="checkbox" class="field checkbox" value="Agree" tabindex="0"     />
                 <span class="choice__text notranslate" >I authorize you to share my application/registration information for event administration, ranking, MLH administration, pre- and post-event informational e-mails, and occasional messages about hackathons in-line with the <a target="_blank" rel="noopener noreferrer" href="https://mlh.io/privacy">MLH Privacy Policy</a>. I further agree to the terms of both the <a target="_blank" rel="noopener noreferrer" href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions">MLH Contest Terms and Conditions</a> and the <a target="_blank" rel="noopener noreferrer" href="https://mlh.io/privacy">MLH Privacy Policy</a>.</span>
                 <span id="req_139" class="req">*</span>
             </label>
         </div>
-        <div class="{{ page.split-right }}"></div>
         <div class="{{ page.split-left }}"></div>
         <div class="{{ page.split-middle }}">
             <input id="saveForm" name="saveForm" class="btTxt submit button pure-button pure-button-primary" type="submit" value="Submit" />    
