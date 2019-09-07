@@ -98,39 +98,28 @@
     }
 }
 
-@include not-media-query($on-laptop) {
-    #tagline {
-        font-size: 54px;
-    }
-
-    .tagline-container {
-        $margin-total: 69vh;
-        $margin-top: 28vh;
-        margin-top: $margin-top;
-        margin-bottom: $margin-total - $margin-top;
-    }
-
-//    .padding-div {
-//        height: 34vh;
-//    }
-}
-
-@include media-query($on-laptop) {
-    #tagline {
-        font-size: 6vw;
-    }
-
-    .tagline-container {
+.tagline-container {
+    @include media-query($on-palm) {
         margin-top: 50px;
         margin-bottom: 50px;
     }
+    $margin-total: 69vh;
+    $margin-top: 28vh;
+    margin-top: $margin-top;
+    margin-bottom: $margin-total - $margin-top;
+}
 
-//    .padding-div {
-//        height: 50px;
-//    }
+#tagline {
+    @include media-query($on-palm) {
+        font-size: 7.7vw;
+    }
+    font-size: 54px;
 }
 
 .description {
+    @include media-query($on-palm) {
+        font-size: 6vw;
+    }
     font-size: 30px;
     margin-bottom: 100px;
 }
