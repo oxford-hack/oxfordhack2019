@@ -32,17 +32,19 @@ faq:
             answer: Have more questions? Contact us at committee@oxfordhack.co.uk.
 ---
 
-<div class="pure-g">
-    <div class="pure-u-1 faq-nav">
-        {% for category in page.faq %}
-        <fieldset class="faq-questions" style="border: 1px white solid">
-            <legend class="faq-questions-title" style="margin-left: 1em; padding: 0.2em 0.8em ">{{ category.title }}</legend>
-            {% for item in category.questions %}
-            <a href="#{{ item.question | slugify }}">{{ item.question }}</a><br />
-            {% endfor %}
-        </fieldset>
+<div class="faq-nav">
+    {% for category in page.faq %}
+    <fieldset class="faq-questions" style="border: 1px white solid">
+        <legend class="faq-questions-title" style="margin-left: 1em; padding: 0.2em 0.8em ">{{ category.title }}</legend>
+        <img id="duck-faq" src="{{ site.baseurl }}/media/duck-faq.gif">
+        {% for item in category.questions %}
+        <a href="#{{ item.question | slugify }}">{{ item.question }}</a><br />
         {% endfor %}
-    </div>
+    </fieldset>
+    {% endfor %}
+</div>
+
+<div class="pure-g">
     <div class="pure-u-1 faq-full">
         {% for category in page.faq %}
         {% for item in category.questions %}

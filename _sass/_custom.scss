@@ -132,9 +132,17 @@
     text-align: center;
 }
 
+.register-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
 .register-button input {
+    @include not-media-query($on-palm) {
+        padding: 30px 45px 30px 45px;
+    }
     font-size: 28px;
-    padding: 30px 45px 30px 45px;
     margin-bottom: 100px;
 }
 
@@ -227,16 +235,45 @@ input:not([type=file]):not(.button), textarea {
     font-size: 14px;
 }
 
+#dick-register {
+    float: right;
+    max-width: 45%;
+    width: 150px;
+    margin-right: calc((#{$content-width} * 0.5) - 150px);
+}
+
 #duck-register {
     @include media-query($on-palm) {
-        position: inherit;
+        @include media-query(530px) {
+            top: 90px;
+            left: 0;
+        }
+        top: 280px;
+        left: 360px;
+    }
+
+    @include not-media-query($on-palm) {
+        left: 540px;
     }
 
     position: absolute;
     max-width: 15%;
     min-width: 150px;
     top: 0;
-    right: 35%;
+}
+
+#duck-faq {
+    height: 40vw;
+    max-height: 350px;
+    float: right;
+}
+
+#duck-home {
+    & img {
+        max-width: 300px;
+        float: right;
+    }
+    padding-bottom: 100px;
 }
 
 .stat-icon img {
