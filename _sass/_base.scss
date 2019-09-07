@@ -172,15 +172,18 @@ pre {
  * Wrapper
  */
 .wrapper {
-    &:not(.wrapper-header) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    &.wrapper-footer {
+        max-width: -webkit-calc(100% - (#{$mlh-badge-width} * 2) - (#{$spacing-unit} * 2));
+        max-width: calc(100% - (#{$mlh-badge-width} * 2) - (#{$spacing-unit} * 2));
     }
 
     &.wrapper-header {
         max-width: -webkit-calc(100% - (#{$spacing-unit} * 2));
         max-width: calc(100% - (#{$spacing-unit} * 2));
     }
+
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
 
     margin-right: auto;
     margin-left: auto;
@@ -189,6 +192,10 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
+        &.wrapper-footer {
+            max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+            max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        }
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
 
