@@ -244,16 +244,16 @@ input:not([type=file]):not(.button), textarea {
 
 #duck-register {
     @include media-query($on-palm) {
-        @include media-query(530px) {
+        @include media-query(570px) {
             top: 90px;
             left: 0;
         }
         top: 280px;
-        left: 360px;
+        left: 400px;
     }
 
     @include not-media-query($on-palm) {
-        left: 540px;
+        left: 600px;
     }
 
     position: absolute;
