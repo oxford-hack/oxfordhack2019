@@ -2,6 +2,7 @@
 layout: default
 js:
     - tagline.js
+    - countdown.js
 ---
 
 <div class="pure-g home">
@@ -34,6 +35,9 @@ js:
         </h2>
     </div>
 
+    <div id="countdown" class="pure-u-1">
+    </div>
+
     <div id="duck-home" class="pure-u-1-2">
         <img src="{{ site.baseurl }}/media/duck-home.gif">
     </div>
@@ -42,3 +46,7 @@ js:
     </form>
 
 </div>
+
+<script>
+    initialize_countdown("2019-10-21T23:59:59Z");
+</script>

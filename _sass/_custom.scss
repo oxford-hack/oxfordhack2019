@@ -248,7 +248,7 @@ input:not([type=file]):not(.button), textarea {
             top: 90px;
             left: 0;
         }
-        top: 280px;
+        top: 430px;
         left: 400px;
     }
 
@@ -259,7 +259,7 @@ input:not([type=file]):not(.button), textarea {
     position: absolute;
     max-width: 15%;
     min-width: 150px;
-    top: 0;
+    top: 150px;
 }
 
 #duck-faq {
@@ -282,4 +282,10 @@ input:not([type=file]):not(.button), textarea {
 .stat-icon img {
     height: 32px;
     fill: #bababa;
+}
+
+#countdown {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
 }
