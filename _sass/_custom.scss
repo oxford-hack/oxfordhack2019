@@ -111,6 +111,10 @@
     margin-bottom: $spacing-unit;
 }
 
+.sponsor-description {
+    text-align: justify;
+}
+
 .tagline-container {
     @include media-query($on-palm) {
         margin-top: 50px;
