@@ -70,32 +70,45 @@
 }
 
 .sponsors-header {
-    //left: 0;
-    //width: 100vw;
-
     padding-top: 10px;
     padding-bottom: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 30px;
-    text-align: center;
-    //color: grey;
+    //text-align: center;
 
     &.sponsors-platinum {
-        background-color: #b0c4de;
+        border-bottom: 3px solid #c2bfc0;
     }
 
     &.sponsors-gold {
-        background-color: #ffd700;
+        border-bottom: 3px solid #c3aa50;
     }
 
     &.sponsors-silver {
-        background-color: #c0c0c0;
+        border-bottom: 3px solid #a4a4a4;
     }
 
     &.sponsors-bronze {
-        background-color: #cd7f32;
+        border-bottom: 3px solid #b56e20;
     }
+
+    &.sponsors-partner {
+        border-bottom: 3px solid #000000;
+    }
+
+    & img {
+        max-width: 50px;
+        margin-right: $spacing-unit;
+    }
+}
+
+.sponsors-child img {
+    width: 100%;
+}
+
+.platinum-image-container {
+    margin-bottom: $spacing-unit;
 }
 
 .tagline-container {
@@ -288,4 +301,12 @@ input:not([type=file]):not(.button), textarea {
     text-align: center;
     font-size: 35px;
     margin-bottom: 40px;
+}
+
+//.sponsors-child:not(:last-child) {
+//    margin-bottom: $spacing-unit;
+//}
+
+.sponsors-child {
+    margin-bottom: $spacing-unit;
 }
