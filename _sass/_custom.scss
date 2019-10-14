@@ -314,3 +314,24 @@ input:not([type=file]):not(.button), textarea {
 .sponsors-child {
     margin-bottom: $spacing-unit;
 }
+
+.hide-sm {
+    @include not-media-query(35.5em) {
+        display: none;
+        visibility: hidden;
+        height: 0;
+    }
+    & img {
+        width: calc(100% - 100px);
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.show-sm {
+    @include media-query(35.5em) {
+        display: none;
+        visibility: hidden;
+        height: 0;
+    }
+}
