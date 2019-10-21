@@ -252,33 +252,6 @@ input:not([type=file]):not(.button), textarea {
     font-size: 14px;
 }
 
-#dick-register {
-    float: right;
-    max-width: 45%;
-    width: 150px;
-    margin-right: calc((#{$content-width} * 0.5) - 150px);
-}
-
-#duck-register {
-    @include media-query($on-palm) {
-        @include media-query(570px) {
-            top: 90px;
-            left: 0;
-        }
-        top: 430px;
-        left: 400px;
-    }
-
-    @include not-media-query($on-palm) {
-        left: 600px;
-    }
-
-    position: absolute;
-    max-width: 15%;
-    min-width: 150px;
-    top: 150px;
-}
-
 #duck-faq {
     height: 40vw;
     max-height: 350px;
@@ -334,4 +307,8 @@ input:not([type=file]):not(.button), textarea {
         visibility: hidden;
         height: 0;
     }
+}
+
+#register-button {
+    pointer-events: all;
 }
