@@ -1,0 +1,59 @@
+---
+layout: page
+title: Event
+heading: About the event
+permalink: /event/
+order: 50
+emphasis: 1
+split-left: "pure-u-md-1-8"
+split-right: "pure-u-md-1-8"
+split-middle: "pure-u-1 pure-u-md-3-4"
+split-middle-3: "pure-u-1-3 pure-u-md-1-4"
+split-fullwidth: "pure-u-1 pure-u-md-7-8"
+js:
+    - countdown.js
+awards:
+    - picture: hackfortheplanet.png
+      name: Hack (for) The Planet
+      description: "For this award, you’ve got to think big.<br />Big enough to save the world from the climate crisis, the seas from pollution, or any of the issues we’re facing. Your product can help raise awareness about energy usage, advocate for public transport or recycling, or any other topic that impacts our planet. True change requires everyone to be on board, so the product should be as user-friendly as possible!"
+    - picture: mostentertaining.png
+      name: Most Entertaining Hack
+      description: "Make something fun!<br />Your product is positively brimming with amusement and charm. It isn’t necessarily a game, as long as it creates an enjoyable experience. While bugs and glitches can sometimes be funny, we don’t want to laugh at incompleteness, so you’ll need quality along with your entertainment!"
+    - picture: hackerschoice.png
+      name: Hackers' Choice
+      description: "Give the people what they want!<br />We don’t actually know what you should make for this award, since it’ll be voted for by your fellow attendees. Perhaps you can build a cool toolset to improve their productivity, or appeal to their fun side with a witty pitch. Think about a product you’d like to see made by another team - chances are your result will be appreciated by others too!"
+    - picture: mostinventive.png
+      name: Most Inventive Hack
+      description: "Make something innovative!<br />Your team’s not just thinking outside the box - they’re thinking outside the whole building. Your product might solve a problem we didn’t even know we had, in a way we didn’t even know could be done. You could utilize new technologies, or apply your avant-garde ideas to established workflows - as long as it’s remarkable!"
+    - picture: moststylish.png
+      name: Most Stylish Hack
+      description: "Make something dazzling!<br />24 hours doesn’t give much opportunity to make a well-polished interface, but this product made time for it, and more. Your product is intuitive and responsive, and has a generally good-looking design. It’s hard to convey all this in an elevator pitch, so try and get a working demo for people to try out!"
+    - picture: socialgood.png
+      name: Hack for Social Good
+      description: "Make something to enhance society!<br />Your product takes an innovative stance to solve a problem for society - be it education, healthcare, social media, or anything else you think could be improved. The product could help charities accomplish their goals, raise awareness of misinformation, or evolve the public political discourse. Accessibility is vital if you want widespread use of your product!"
+    - picture: hackiesthack.png
+      name: "'Hackiest' Hack"
+      description: "It works! ...surprisingly.<br />For this award, your project takes on an ambitious challenge, and just about pulls it off. You could mix a handful of tools together, use APIs in unexpected ways, or partake in other dubious acts to get your idea off the ground. Many powerful projects rely on other technologies, and your team’s masterful at getting them to work together."
+---
+
+<h2>Awards</h2>
+
+<p>Here's some information about the prizes we'll be offering at the event!<br />Sponsor challenges will be revealed soon.</p>
+
+{% for item in page.awards %}
+    <div class="award">
+        <div class="award-picture">
+            <img src="{{ site.baseurl }}/media/awards/{{ item.picture }}">
+        </div>
+        <h3 class="award-name">
+            {{ item.name }}
+        </h3>
+        <div class="award-description">
+            {{ item.description }}
+        </div>
+    </div>
+{% endfor %}
+
+<h2>Schedule</h2>
+
+<p>We'll be unveiling the schedule for the event soon, so sit tight!</p>

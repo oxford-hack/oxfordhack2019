@@ -19,7 +19,10 @@
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for my_page in sorted_pages %}
           {% if my_page.title %}
+          {% if my_page.hidden %}
+          {% else %}
           <a class="page-link{% if page.url contains my_page.url %} active{% endif %}{% if my_page.emphasis %} emphasis{% endif %}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          {% endif %}
           {% endif %}
         {% endfor %}
       </div>

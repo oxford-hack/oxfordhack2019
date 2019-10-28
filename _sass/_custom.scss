@@ -266,7 +266,6 @@ input:not([type=file]):not(.button), textarea {
         max-width: 300px;
         float: right;
     }
-    padding-bottom: 100px;
 }
 
 .stat-icon img {
@@ -311,4 +310,22 @@ input:not([type=file]):not(.button), textarea {
 
 #register-button {
     pointer-events: all;
+}
+
+.award {
+    min-height: 250px;
+
+    &:not(:last-child) {
+        margin-bottom: $spacing-unit;
+    }
+
+    &:nth-of-type(2n) .award-picture {
+        float: right;
+    }
+
+    & .award-picture {
+        float: left;
+        max-width: 200px;
+        min-height: 250px;
+    }
 }
