@@ -34,6 +34,71 @@ awards:
     - picture: hackiesthack.png
       name: "'Hackiest' Hack"
       description: "It works! ...surprisingly.<br />For this award, your project takes on an ambitious challenge, and just about pulls it off. You could mix a handful of tools together, use APIs in unexpected ways, or partake in other dubious acts to get your idea off the ground. Many powerful projects rely on other technologies, and your team’s masterful at getting them to work together."
+schedule-sat:
+    - time: "10:00"
+      activity: Doors open for participants
+      location: Main entrance
+    - time: "10:00"
+      activity: Team building
+      location: Café
+    - time: "10:45"
+      activity: Opening ceremony
+      location: L1 Lecture Theatre
+    - time: "12:00"
+      activity: Hacking starts
+      location: "-"
+    - time: "12:00"
+      activity: Lunch
+      location: Café
+    - time: "12:45"
+      activity: Cisco workshop
+      location: L2 Lecture Theatre
+    - time: "13:40"
+      activity: Optiver workshop
+      location: L3 Lecture Theatre
+    - time: "14:20"
+      activity: Microsoft workshop
+      location: L2 Lecture Theatre
+    - time: "15:15"
+      activity: Capital One workshop
+      location: L3 Lecture Theatre
+    - time: "15:40"
+      activity: "\"Intro to Hardware Hacking\" workshop"
+      location: L2 Lecture Theatre
+    - time: "16:20"
+      activity: Cisco project demo
+      location: L3 Lecture Theatre
+    - time: "16:45"
+      activity: Microsoft project demo
+      location: L2 Lecture Theatre
+    - time: "17:10"
+      activity: MLH slideshow karaoke
+      location: L3 Lecture Theatre
+    - time: "18:00"
+      activity: Dinner
+      location: Café
+    - time: "20:00"
+      activity: MLH capture the flag
+      location: L2 Lecture Theatre
+schedule-sun:
+    - time: "09:00"
+      activity: Breakfast
+      location: Café
+    - time: "12:00"
+      activity: Hackathon ends
+      location: "-"
+    - time: "12:00"
+      activity: Lunch
+      location: Café
+    - time: "13:00"
+      activity: Project demos start
+      location: L1 Lecture Theatre
+    - time: "16:30"
+      activity: Closing ceremony
+      location: L1 Lecture Theatre
+    - time: "17:30"
+      activity: Participants take off
+      location: "-"
 ---
 
 <h2>Awards</h2>
@@ -56,4 +121,30 @@ awards:
 
 <h2>Schedule</h2>
 
-<p>We'll be unveiling the schedule for the event soon, so sit tight!</p>
+<table id="schedule">
+    <tr>
+        <th>Time</th>
+        <th>Activity</th>
+        <th>Location</th>
+    </tr>
+    <tr class="day">
+        <td colspan="3">Saturday</td>
+    </tr>
+    {% for item in page.schedule-sat %}
+    <tr>
+        <td>{{ item.time }}</td>
+        <td>{{ item.activity }}</td>
+        <td>{{ item.location }}</td>
+    </tr>
+    {% endfor %}
+    <tr class="day day2">
+        <td colspan="3">Sunday</td>
+    </tr>
+    {% for item in page.schedule-sun %}
+    <tr>
+        <td>{{ item.time }}</td>
+        <td>{{ item.activity }}</td>
+        <td>{{ item.location }}</td>
+    </tr>
+    {% endfor %}
+</table>

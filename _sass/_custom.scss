@@ -329,3 +329,28 @@ input:not([type=file]):not(.button), textarea {
         min-height: 250px;
     }
 }
+
+#schedule {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+
+    & tr td {
+        padding: 5px;
+    }
+
+    & tr th {
+        border-bottom: 1px solid $brand-color;
+    }
+
+    & tr.day {
+        & td {
+            padding-top: 10px;
+            //border-bottom: 1px solid rgba($brand-color, 0.3);
+            color: $brand-color;
+        }
+        &.day2 td {
+            padding-top: $spacing-unit;
+        }
+    }
+}
