@@ -1,6 +1,6 @@
 function initialize_countdown(endtime) {
     var countdown_big = "Hacking begins in<br /><span id='countdown-days'>0</span> Day<span id='countdown-days-s'>s</span>, <span id='countdown-hours'>0</span> Hour<span id='countdown-hours-s'>s</span>, <span id='countdown-minutes'>00</span> Minute<span id='countdown-minutes-s'>s</span>, <span id='countdown-seconds'>00</span> Second<span id='countdown-seconds-s'>s</span>";
-    var countdown_small = "Registrations close in<br /><span id='countdown-days'>0</span>d <span id='countdown-hours'>0</span>h <span id='countdown-minutes'>00</span>m <span id='countdown-seconds'>00</span>s";
+    var countdown_small = "Hacking begins in<br /><span id='countdown-days'>0</span>d <span id='countdown-hours'>0</span>h <span id='countdown-minutes'>00</span>m <span id='countdown-seconds'>00</span>s";
 
     var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
     var small = width < 850
