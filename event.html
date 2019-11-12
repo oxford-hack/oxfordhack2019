@@ -34,6 +34,16 @@ awards:
     - picture: hackiesthack.png
       name: "'Hackiest' Hack"
       description: "It works! ...surprisingly.<br />For this award, your project takes on an ambitious challenge, and just about pulls it off. You could mix a handful of tools together, use APIs in unexpected ways, or partake in other dubious acts to get your idea off the ground. Many powerful projects rely on other technologies, and your team’s masterful at getting them to work together."
+sponsor-awards:
+    - picture: cisco.png
+      name: Cisco Collaboration Challenge
+      description: "Cisco collaboration has a history of connecting people with voice and video for thirty years, with Cisco Webex hosting over 85 billion minutes of meetings ever year. Despite this, there are still unexplored ways people could be brought together with technology. We challenge participants to find a way to connect people in a new way – hacks will be judged on originality, usefulness, along with a special prize for greatest distance! While video is our strength (and you can certainly pick our brains for how to do things with it), any and all ideas are welcomed. For those who want at least some of the work of sending messages across the internet done for them, we're running a workshop to show teams how to build a chatbot on Webex Teams, but our technology is here to help, not a requirement!"
+    - picture: optiverbg.jpg
+      name: Optiver
+      description: "Intrigued by financial markets and algorithmic trading? We challenge you to develop a trading algorithm that can make a profit on our virtual exchange, while trading live against other hackers!<br />As a leading global electronic market maker that trades on more than 100 exchanges world-wide, it is our daily job to keep financial markets afloat. This is your opportunity to step into our shoes for one weekend and discover what it is like to build cutting-edge technology that powers today’s financial world.<br />In our workshop, we’ll teach you fundamental market-dynamics, and then, with some basic trading knowledge under your belt, you’re ready to delve into our challenge and find viable strategies that make money. Still sounds difficult? Don't worry, we’ll be on-site and excited to help you!<br />This is a unique opportunity to get to know our business in a way you otherwise wouldn’t, and win great prizes along the way!"
+    - picture: compsoc.png
+      name: "CompSoc: Most Useless Hack"
+      description: "The hack Oxford deserves, but not the one it needs right now.<br />The Oxford University Computer Society wants to empower you to do something no one else has dreamt of, because no one would ever want it. To win Most Useless Hack, you'll need to make something that's utterly useless, and do it in a really cool way."
 schedule-sat:
     - time: "10:00"
       activity: Doors open for participants
@@ -101,9 +111,16 @@ schedule-sun:
       location: "-"
 ---
 
+<ul>
+    <li><a href="#awards">Awards</a><br /></li>
+    <li><a href="#sponsor-awards">Sponsor Awards</a><br /></li>
+    <li><a href="#schedule">Schedule</a><br /></li>
+</ul>
+
+<span class="anchor" id="awards"></span>
 <h2>Awards</h2>
 
-<p>Here's some information about the prizes we'll be offering at the event!<br />Sponsor challenges will be revealed soon.</p>
+<p>Here's some information about the prizes we'll be offering at the event!
 
 {% for item in page.awards %}
     <div class="award">
@@ -119,8 +136,28 @@ schedule-sun:
     </div>
 {% endfor %}
 
+<span class="anchor" id="sponsor-awards"></span>
+<h2>Sponsor Awards</h2>
+
+<p>Some of our sponsors are offering prizes for their own challenges at the event:</p>
+
+{% for item in page.sponsor-awards %}
+    <div class="award">
+        <div class="award-picture-sponsor">
+            <img src="{{ site.baseurl }}/media/sponsors/{{ item.picture }}">
+        </div>
+        <h3 class="award-name">
+            {{ item.name }}
+        </h3>
+        <div class="award-description">
+            {{ item.description }}
+        </div>
+    </div>
+{% endfor %}
+
 <h2>Schedule</h2>
 
+<span class="anchor" id="schedule"></span>
 <table id="schedule">
     <tr>
         <th>Time</th>
