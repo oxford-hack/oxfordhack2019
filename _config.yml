@@ -11,7 +11,7 @@ email: committee@oxfordhack.co.uk
 description: > # this means to ignore newlines until "baseurl:"
   Join us this November to build something brilliant at Oxford University's largest student hackathon.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://oxfordhack.co.uk" # the base hostname & protocol for your site
+url: "https://jsmailes.gitlab.io/oxfordhack.co.uk/" # the base hostname & protocol for your site
 facebook_url: "https://facebook.com/OxfordHack2019/"
 twitter_username: jekyllrb
 github_username:  jekyll
